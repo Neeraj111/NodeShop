@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <body class="font-sans">
+    <nav class="w-full flex justify-between px-5 py-3">
+      <h3 class="text-xl">Scatch</h3>
+      <% var loggedinOwner= typeof loggedinOwner !=="undefined" ? loggedinOwner:true%>
+      <% if(loggedinOwner){%>
+        <div class="flex gap-5">
+            <a href="/owners/admin">Admin</a>
+            <a href="/owners/products/create">Create Product</a>
+            <a class="text-red-600" href="/owners/ownerLogout">LogOut</a>
+        </div>
+      <%}%>
+    </nav>
+  </body>
+</html>
